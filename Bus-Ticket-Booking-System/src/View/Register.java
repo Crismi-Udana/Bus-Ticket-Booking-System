@@ -52,6 +52,7 @@ public class Register extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(550, 100));
 
         jLabel1.setText("Name");
 

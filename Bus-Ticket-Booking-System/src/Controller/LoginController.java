@@ -19,4 +19,19 @@ public class LoginController {
         
         return i;
     }
+    
+    public static int Login(String username,String password){
+        
+        int i = LoginDao.CheckUserExist(username);        
+        int j = LoginDao.checkLogin(username,password);
+        int k = 0;
+        
+        if(j == 1){
+            k = 1;
+        }else{
+            k=0;
+        }
+        
+        return k;
+    }
 }
