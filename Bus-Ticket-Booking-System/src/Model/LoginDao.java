@@ -34,7 +34,7 @@ public class LoginDao {
     
     public static void registerUser(String username,String password){
         try{            
-          CommonDao.getConnection().executeUpdate("INSERT INTO `login` (`username`,`password`) VALUES ('" + username +"',' " + password +"')");
+          CommonDao.getConnection().executeUpdate("INSERT INTO `login` (`username`,`pword`) VALUES ('" + username +"',' " + password +"')");
         }catch(SQLException e){
         JOptionPane.showMessageDialog(null,"Can't Connect As : " + e.getMessage());
         }

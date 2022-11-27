@@ -4,6 +4,9 @@
  */
 package View;
 
+import java.awt.Color;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Lakshan
@@ -26,21 +29,101 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelMain = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mnuHome = new javax.swing.JMenu();
+        mnuBus = new javax.swing.JMenu();
+        itmAddBus = new javax.swing.JMenuItem();
+        mnuPassenger = new javax.swing.JMenu();
+        mnuRoute = new javax.swing.JMenu();
+        mnuContact = new javax.swing.JMenu();
+        mnuAbout = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        panelMain.setBackground(new java.awt.Color(255, 0, 51));
+        panelMain.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout panelMainLayout = new javax.swing.GroupLayout(panelMain);
+        panelMain.setLayout(panelMainLayout);
+        panelMainLayout.setHorizontalGroup(
+            panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 168, Short.MAX_VALUE)
+        );
+        panelMainLayout.setVerticalGroup(
+            panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 178, Short.MAX_VALUE)
+        );
+
+        mnuHome.setText("Home");
+        mnuHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuHomeActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(mnuHome);
+
+        mnuBus.setText("Bus");
+
+        itmAddBus.setText("Add Bus");
+        itmAddBus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmAddBusActionPerformed(evt);
+            }
+        });
+        mnuBus.add(itmAddBus);
+
+        jMenuBar1.add(mnuBus);
+
+        mnuPassenger.setText("Passenger");
+        jMenuBar1.add(mnuPassenger);
+
+        mnuRoute.setText("Route");
+        jMenuBar1.add(mnuRoute);
+
+        mnuContact.setText("Contact Us");
+        jMenuBar1.add(mnuContact);
+
+        mnuAbout.setText("About");
+        jMenuBar1.add(mnuAbout);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(panelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(429, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(103, Short.MAX_VALUE)
+                .addComponent(panelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnuHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuHomeActionPerformed
+        if(mnuHome.isArmed()){
+        panelMain = new JPanel();
+        panelMain.setBackground(Color.GREEN);
+        setVisible(true);
+        }
+    }//GEN-LAST:event_mnuHomeActionPerformed
+
+    private void itmAddBusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddBusActionPerformed
+        if(itmAddBus.isArmed()){
+        panelMain = new JPanel();
+        panelMain.setBackground(Color.GREEN);
+        setVisible(true);
+        }
+    }//GEN-LAST:event_itmAddBusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +161,14 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itmAddBus;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu mnuAbout;
+    private javax.swing.JMenu mnuBus;
+    private javax.swing.JMenu mnuContact;
+    private javax.swing.JMenu mnuHome;
+    private javax.swing.JMenu mnuPassenger;
+    private javax.swing.JMenu mnuRoute;
+    private javax.swing.JPanel panelMain;
     // End of variables declaration//GEN-END:variables
 }
